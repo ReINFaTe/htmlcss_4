@@ -1,0 +1,22 @@
+$block-color1: #FFF;
+$block-color2: #F7F7F7;
+$padding-320px: 3%;
+
+:root {
+    font-family: "OpenSans";
+    font-weight: 400;
+    font-size: 16px;
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    background: $block-color2;
+    padding-top: 20%;
+}

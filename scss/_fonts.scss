@@ -1,0 +1,16 @@
+$font-path: "../fonts/";
+
+@mixin font-face($family, $filename, $font-path, $weight: normal, $style: normal) {
+    @font-face {
+      font-family: $family;
+      src: url("#{$font-path}#{$filename}.ttf") format("truetype");
+      font-style: $style;
+      font-weight: $weight;
+    }
+  }
+
+@include font-face("OpenSans", "OpenSans-SemiBold", $font-path, 700);
+
+@include font-face("OpenSans", "OpenSans-Bold", $font-path, 900);
+@include font-face("OpenSans", "OpenSans-Regular", $font-path, 400);
+@include font-face("OpenSans", "OpenSans-Light", $font-path, 100);
