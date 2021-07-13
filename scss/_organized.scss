@@ -1,0 +1,29 @@
+.organized-block {
+    display: grid;
+    padding-left: $padding-320px;
+    padding-right: $padding-320px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-color: #3498db;
+    text-align: center;
+    color: white;
+    div {
+        flex-basis: 25%;
+        margin: 15px;
+        img {
+            width: 85px;
+            height: 60px;
+        }
+        .organized-number {
+            font-size: 16px;
+            margin: 0;
+        }
+        .organized-desc {
+            font-size: 12px;
+            margin: 0;
+
+        }
+
+
+    }
+}

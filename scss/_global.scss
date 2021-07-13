@@ -5,7 +5,7 @@ $padding-320px: 3%;
 :root {
     font-family: "OpenSans";
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1em;
 }
 *, *::after, *::before {
     box-sizing: border-box;
@@ -19,4 +19,9 @@ body {
 .content{
     background: $block-color2;
     padding-top: 20%;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400;
 }

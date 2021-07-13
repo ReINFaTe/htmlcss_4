@@ -1,0 +1,23 @@
+.program-block {
+    padding-left: $padding-320px;
+    padding-right: $padding-320px;
+    .owl-carousel {
+        div {
+            width: 100%;
+            text-align: center;
+            h3 {
+                border-bottom: 1px solid #3498db;
+                color: #666;
+            }
+            p {
+                color: #888;
+            }
+            img {
+                margin: auto;
+                width: 150px;
+                height: 150px;
+                object-fit: contain;
+            }
+        }
+    }
+}
