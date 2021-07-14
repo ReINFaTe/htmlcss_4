@@ -1,8 +1,19 @@
+
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
         loop:false,
-        items:1,
         dots:true,
-        center:true
+        responsive : {
+            0 : {
+                items: 1,
+            },
+            600 : {
+                items: 2
+            },
+            850 : {
+                items: 3,
+            }
+
+        }
     });
 });

@@ -1,0 +1,20 @@
+footer {
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: $block-color1;
+
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+    .footer-copyright {
+        color: #337ab7;
+    }
+    .footer-terms {
+        color: #666
+    }
+    p {
+        padding: 10px 0;
+        margin: 0;
+    }
+}

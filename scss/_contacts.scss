@@ -1,0 +1,26 @@
+.contacts-block {
+    display: grid;
+    padding: $padding-320px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-color: #3498db;
+    text-align: center;
+    color: white;
+    div {
+        i {
+            font-size: 42px;
+
+        }
+        .contact-title {
+            font-weight: 900;
+            font-size: 14px;
+        }
+        .contact-info {
+            font-size: 12px;
+            white-space: nowrap;
+        }
+    }
+}

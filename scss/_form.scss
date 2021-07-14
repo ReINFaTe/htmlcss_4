@@ -7,6 +7,20 @@
 .form-block {
     padding-left: $padding-320px;
     padding-right: $padding-320px;
+    label {
+            &::after {
+                display: inline-block;
+                background-size: 7px;
+                background-repeat: no-repeat;
+                margin-left: 3px;
+                line-height: 1;
+                width: 10px;
+                height: 8px;
+                content: "";
+                background-image: url("../img/icons/required.png");
+            
+        }
+    }
     .form-control:not([type = "checkbox"]) {
         border: 1px solid #bababa;
         border-radius: 5px;

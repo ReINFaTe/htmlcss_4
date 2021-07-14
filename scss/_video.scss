@@ -1,0 +1,13 @@
+.video-block {
+    padding-left: $padding-320px;
+    padding-right: $padding-320px;
+    text-align: center;
+    p {
+        color: #888;
+    }
+    iframe {
+        width: 100%;
+        height: 60vw;
+        margin-bottom: 20vw;
+    }
+}

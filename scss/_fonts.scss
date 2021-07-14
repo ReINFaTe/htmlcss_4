@@ -1,5 +1,5 @@
 $font-path: "../fonts/";
-
+$fa-font-path: "../fontawesome/webfonts";
 @mixin font-face($family, $filename, $font-path, $weight: normal, $style: normal) {
     @font-face {
       font-family: $family;
@@ -14,3 +14,9 @@ $font-path: "../fonts/";
 @include font-face("OpenSans", "OpenSans-Bold", $font-path, 900);
 @include font-face("OpenSans", "OpenSans-Regular", $font-path, 400);
 @include font-face("OpenSans", "OpenSans-Light", $font-path, 100);
+
+
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/regular.scss";
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";
