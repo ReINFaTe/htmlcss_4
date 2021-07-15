@@ -1,7 +1,13 @@
 .program-block {
+    background-color: $block-color1;
+
+}
+.program-block-wrapper {
+    margin: 0 auto;
+    max-width: 1220px;
+
     padding-left: $padding-320px;
     padding-right: $padding-320px;
-    background-color: $block-color1;
     .owl-carousel {
         .owl-stage{
            margin: 0 auto; 
@@ -20,6 +26,9 @@
                 p {
                     color: #888;
                 }
+               }
+               @media (min-width: 768px){
+                   padding-right: 15px;
                }
             img {
                 margin: auto;

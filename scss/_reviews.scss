@@ -1,15 +1,23 @@
 .reviews-block {
+    background-color: $block-color1;
+
+}
+.reviews-block-wrapper {
+    max-width: 1220px;
     padding-left: $padding-320px;
     padding-right: $padding-320px;
-    background-color: $block-color1;
+    margin: 0 auto;
     .owl-carousel {
         .owl-stage{
            margin: 0 auto; 
 
             .owl-item {
+                text-align: center;
                 padding: 0 15px;
                 animation-duration: 2s;
                 .reviews-content{
+                    margin: 0;
+                    color: #888;
                     margin-bottom: 50px;
                     &::before{
                         @extend %fa-icon;
@@ -36,27 +44,15 @@
                 .reviews-name {
                     font-weight: normal;
                     color: inherit;
+                    margin-bottom: 0;
+
                 }
                 .reviews-position {
+                    margin-top: 0;
+                    font-weight: 100;
+                    color: #888;
                     font-style: italic;
                 }
-            }
-        }
-        div {
-            text-align: center;
-            h3 {
-                border-bottom: 1px solid #3498db;
-                color: #666;
-            }
-            p {
-                margin: 0;
-                color: #888;
-            }
-            img {
-                margin: auto;
-                width: 150px;
-                height: 150px;
-                object-fit: contain;
             }
         }
     }

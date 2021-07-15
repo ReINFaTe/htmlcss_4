@@ -1,4 +1,7 @@
-.video-block {
+
+.video-block-wrapper {
+    margin: 0 auto;
+    max-width: 1220px;
     padding-left: $padding-320px;
     padding-right: $padding-320px;
     text-align: center;
@@ -7,7 +10,8 @@
     }
     iframe {
         width: 100%;
-        height: 60vw;
-        margin-bottom: 20vw;
+        max-width: 1020px;
+        height: 480px;
+        margin-bottom: 75px;
     }
 }

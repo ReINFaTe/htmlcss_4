@@ -1,6 +1,6 @@
 $block-color1: #FFF;
 $block-color2: #F7F7F7;
-$padding-320px: 3%;
+$padding-320px: 15px;
 
 :root {
     font-family: "OpenSans";
@@ -14,11 +14,13 @@ $padding-320px: 3%;
 body {
     margin: 0;
     padding: 0;
+    background: $block-color2;
+
 }
 
 .content{
-    background: $block-color2;
-    padding-top: 20%;
+    padding-top: 50px;
+    margin: 0 auto;
 }
 
 h2 {
@@ -27,6 +29,9 @@ h2 {
     text-align: center;
     font-weight: 400;
 }
+
+
+
 .fadeIn {
     animation-name: fadeIn;
 }

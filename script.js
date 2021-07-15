@@ -3,6 +3,7 @@ $(document).ready(function(){
     $(".program-slider").owlCarousel({
         loop:false,
         dots:true,
+        autowidth: true,
         responsive : {
             0 : {
                 items: 1,
@@ -17,6 +18,8 @@ $(document).ready(function(){
         }
     });
     $(".reviews-slider").owlCarousel({
+        autowidth: true,
+
         loop:false,
         dots:true,
         items: 1,
@@ -27,6 +30,7 @@ $(document).ready(function(){
         animateIn: "fadeIn"
     });
     $(".mentors-slider").owlCarousel({
+        autowidth: true,
         loop:false,
         dots:true,
         items: 1,
