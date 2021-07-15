@@ -3,39 +3,43 @@
     padding-right: $padding-320px;
     background-color: $block-color1;
     .owl-carousel {
-        .owl-item {
-            padding: 0 15px;
+        .owl-stage{
+           margin: 0 auto; 
 
-            .reviews-content{
-                margin-bottom: 50px;
-                &::before{
-                    @extend %fa-icon;
-                    @extend .fas;
-                    content: fa-content($fa-var-quote-left);
-                    position:absolute;
-                    top: 0;
-                    left: 5px;
-                    color: #888;
-                    opacity: 0.5;
+            .owl-item {
+                padding: 0 15px;
+                animation-duration: 2s;
+                .reviews-content{
+                    margin-bottom: 50px;
+                    &::before{
+                        @extend %fa-icon;
+                        @extend .fas;
+                        content: fa-content($fa-var-quote-left);
+                        position:absolute;
+                        top: 0;
+                        left: 5px;
+                        color: #888;
+                        opacity: 0.5;
+                    }
+                    &::after{
+                        @extend %fa-icon;
+                        @extend .fas;
+                        content: fa-content($fa-var-quote-right);
+                        position:absolute;
+                        bottom: 95px;
+                        right: 5px;
+        
+                        color: #888;
+                        opacity: 0.5;
+                    }
                 }
-                &::after{
-                    @extend %fa-icon;
-                    @extend .fas;
-                    content: fa-content($fa-var-quote-right);
-                    position:absolute;
-                    bottom: 95px;
-                    right: 5px;
-    
-                    color: #888;
-                    opacity: 0.5;
+                .reviews-name {
+                    font-weight: normal;
+                    color: inherit;
                 }
-            }
-            .reviews-name {
-                font-weight: normal;
-                color: inherit;
-            }
-            .reviews-position {
-                font-style: italic;
+                .reviews-position {
+                    font-style: italic;
+                }
             }
         }
         div {

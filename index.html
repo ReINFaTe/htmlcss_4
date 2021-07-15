@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+
         <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-       
         <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
@@ -35,69 +35,72 @@
             </ul>
         </header>
         <div class="content">
-            <div class="about-block">
-                <h1>Курси програмування у Луцьку</h1>
-                <p>Сфера ІТ розвивається максимально швидко. Зараз дуже популярно здобувати освіту, що пов'язана з ІТ. Існує лише одна
-                    проблема - брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало
-                    практики і "живих",
-                    реальних кейсів. ІТ школа OxIT створила таку методику навчання, при якій за короткий час ви отримаєте необхідні
-                    знання щоб стати ІТ спеціалістом.
-                    Чекаємо вас на наших курсах з програмування в Луцьку. Старт наступного курсу 3 серпня.
-                </p>
+            <div class="about-form-block">
+                <div class="about-block">
+                    <h1>Курси програмування у Луцьку</h1>
+                    <p>Сфера ІТ розвивається максимально швидко. Зараз дуже популярно здобувати освіту, що пов'язана з ІТ. Існує лише одна
+                        проблема - брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало
+                        практики і "живих",
+                        реальних кейсів. ІТ школа OxIT створила таку методику навчання, при якій за короткий час ви отримаєте необхідні
+                        знання щоб стати ІТ спеціалістом.
+                        Чекаємо вас на наших курсах з програмування в Луцьку. Старт наступного курсу 3 серпня.
+                    </p>
+                </div>
+                <div class="form-block">
+                    <h2>Зареєструватися на курси</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="input-name">Ім'я</label>
+                            <input type="text" class="form-control" 
+                            id="input-name"
+                            placeholder="Ім'я"
+                            required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-lastname">Прізвище</label>
+                            <input type="text" class="form-control" 
+                            id="input-lastname"
+                            placeholder="Прізвище"
+                            required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-interest">Мене більше цікавить</label>
+                            <input type="text" class="form-control" 
+                            id="input-interest"
+                            placeholder="developer or QA"
+                            required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-tel">Номер телефону</label>
+                            <input type="tel" class="form-control" 
+                                   id="input-tel"
+                                   placeholder="Номер телефону: +38 XXX XX XX XXX"
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-email">Email</label>
+                            <input type="email" class="form-control" 
+                            id="input-email" 
+                            placeholder="Email"
+                            required>
+                        </div>
+                        <div class="form-group form-checkbox-group">
+                            <input type="checkbox" class="form-control" 
+                            id="input-agree" 
+                            required>
+                            <label for="input-agree">Я погоджуюся із <a href="#">Політикою Конфіденційності</a></label>
+    
+                        </div>
+                        <div class="form-group-submit">
+                            <button type="submit" class="form-submit">Зареєструватися зараз</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-block">
-                <h2>Зареєструватися на курси</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="input-name">Ім'я</label>
-                        <input type="text" class="form-control" 
-                        id="input-name"
-                        placeholder="Ім'я"
-                        required>
-                    </div>
-                    <div class="form-group">
-                        <label for="input-lastname">Прізвище</label>
-                        <input type="text" class="form-control" 
-                        id="input-lastname"
-                        placeholder="Прізвище"
-                        required>
-                    </div>
-                    <div class="form-group">
-                        <label for="input-interest">Мене більше цікавить</label>
-                        <input type="text" class="form-control" 
-                        id="input-interest"
-                        placeholder="developer or QA"
-                        required>
-                    </div>
-                    <div class="form-group">
-                        <label for="input-tel">Номер телефону</label>
-                        <input type="tel" class="form-control" 
-                               id="input-tel"
-                               placeholder="Номер телефону: +38 XXX XX XX XXX"
-                               required>
-                    </div>
-                    <div class="form-group">
-                        <label for="input-email">Email</label>
-                        <input type="email" class="form-control" 
-                        id="input-email" 
-                        placeholder="Email"
-                        required>
-                    </div>
-                    <div class="form-group form-checkbox-group">
-                        <input type="checkbox" class="form-control" 
-                        id="input-agree" 
-                        required>
-                        <label for="input-agree">Я погоджуюся із <a href="#">Політикою Конфіденційності</a></label>
-
-                    </div>
-                    <div class="form-group-submit">
-                        <button type="submit" class="form-submit">Зареєструватися зараз</button>
-                    </div>
-                </form>
-            </div>
+            
             <div class="program-block">
                 <h2>Курс «Розробка сайтів»</h2>
-                <div class="owl-carousel owl-theme">
+                <div class="program-slider owl-carousel owl-theme">
                     <div>
                         <img src="img/icons/course-icon-1.png">
                         <h3>Розробка сайтів на WordPress</h3>
@@ -145,7 +148,7 @@
             </div>
             <div class="reviews-block">
                 <h2>Що кажуть студенти наших курсів:</h2>
-                <div class="owl-carousel owl-theme">
+                <div class="reviews-slider owl-carousel owl-theme">
                     <div>
                         <p class="reviews-content">Під час проходження курсів Drupal у школі OxIT я навчився створювати не досить складні сайти та знайшов справу, якою
                         хочу займатись. Після успішного завершення курсів мені надали можливість продовжити навчання вже в якості Intern Site
@@ -183,7 +186,7 @@
             </div>
             <div class="mentors-block">
                 <h2>Наші ментори</h2>
-                <div class="owl-carousel owl-theme">
+                <div class="mentors-slider owl-carousel owl-theme">
                     <div>
                         <img src="img/viktor.png">
                         <p class="mentors-name">Віктор</p>

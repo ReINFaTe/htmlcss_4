@@ -29,8 +29,8 @@
  */
 .fa,
 .fas,
-.reviews-block .owl-carousel .owl-item .reviews-content::after,
-.reviews-block .owl-carousel .owl-item .reviews-content::before,
+.reviews-block .owl-carousel .owl-stage .owl-item .reviews-content::after,
+.reviews-block .owl-carousel .owl-stage .owl-item .reviews-content::before,
 .far,
 .fal,
 .fad,
@@ -44,7 +44,7 @@
   line-height: 1;
 }
 
-.reviews-block .owl-carousel .owl-item .reviews-content::after, .reviews-block .owl-carousel .owl-item .reviews-content::before {
+.reviews-block .owl-carousel .owl-stage .owl-item .reviews-content::after, .reviews-block .owl-carousel .owl-stage .owl-item .reviews-content::before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -146,8 +146,8 @@
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
-.reviews-block .owl-carousel .owl-item .fa-pull-left.reviews-content::after,
-.reviews-block .owl-carousel .owl-item .fa-pull-left.reviews-content::before,
+.reviews-block .owl-carousel .owl-stage .owl-item .fa-pull-left.reviews-content::after,
+.reviews-block .owl-carousel .owl-stage .owl-item .fa-pull-left.reviews-content::before,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left {
@@ -155,8 +155,8 @@
 }
 .fa.fa-pull-right,
 .fas.fa-pull-right,
-.reviews-block .owl-carousel .owl-item .fa-pull-right.reviews-content::after,
-.reviews-block .owl-carousel .owl-item .fa-pull-right.reviews-content::before,
+.reviews-block .owl-carousel .owl-stage .owl-item .fa-pull-right.reviews-content::after,
+.reviews-block .owl-carousel .owl-stage .owl-item .fa-pull-right.reviews-content::before,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right {
@@ -6136,8 +6136,8 @@ readers do not read off random characters that represent icons */
 }
 .fa,
 .fas,
-.reviews-block .owl-carousel .owl-item .reviews-content::after,
-.reviews-block .owl-carousel .owl-item .reviews-content::before {
+.reviews-block .owl-carousel .owl-stage .owl-item .reviews-content::after,
+.reviews-block .owl-carousel .owl-stage .owl-item .reviews-content::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
@@ -6181,17 +6181,44 @@ body {
 
 h2 {
   padding-top: 50px;
+  margin-top: 0;
   text-align: center;
   font-weight: 400;
 }
 
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  0% {
+    opacity: 1;
+  }
+}
 header {
   z-index: 1000;
   position: fixed;
   top: 0;
   right: 0;
   overflow: hidden;
-  max-height: 20vw;
+  height: 64px;
   width: 100%;
   background-color: #FFF;
   box-shadow: 0 1px 12px 0 rgba(51, 51, 51, 0.23);
@@ -6202,7 +6229,7 @@ header {
   flex-wrap: wrap;
   padding-left: 3%;
   padding-right: 3%;
-  transition: max-height 1s ease-in;
+  transition: height 1s ease-in;
 }
 header .logo {
   grid-area: a;
@@ -6268,10 +6295,39 @@ header .menu-button .icon-bar {
 header .menu-button .icon-bar:not(:first-child) {
   margin-top: 5px;
 }
+@media (min-width: 768px) {
+  header {
+    grid-template-columns: auto 7fr;
+  }
+  header .logo {
+    display: none;
+  }
+  header .menu-button {
+    display: none;
+  }
+  header .menu {
+    visibility: visible;
+    grid-area: b;
+  }
+  header .menu li {
+    display: inline;
+  }
+  header .menu li a {
+    display: inline;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    grid-template-columns: 1fr auto;
+  }
+  header .logo {
+    display: block;
+  }
+}
 
 #menu-open:target ~ header {
-  max-height: 100vw;
-  transition: max-height 1s ease-out;
+  height: 300px;
+  transition: height 1s ease-out;
 }
 #menu-open:target ~ header .menu {
   visibility: visible;
@@ -6282,6 +6338,14 @@ header .menu-button .icon-bar:not(:first-child) {
 }
 #menu-open:target ~ header #menu-close {
   display: block;
+}
+
+@media (min-width: 768px) {
+  .about-form-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 }
 
 .about-block {
@@ -6410,13 +6474,17 @@ header .menu-button .icon-bar:not(:first-child) {
   padding-right: 3%;
   background-color: #FFF;
 }
-.reviews-block .owl-carousel .owl-item {
-  padding: 0 15px;
+.reviews-block .owl-carousel .owl-stage {
+  margin: 0 auto;
 }
-.reviews-block .owl-carousel .owl-item .reviews-content {
+.reviews-block .owl-carousel .owl-stage .owl-item {
+  padding: 0 15px;
+  animation-duration: 2s;
+}
+.reviews-block .owl-carousel .owl-stage .owl-item .reviews-content {
   margin-bottom: 50px;
 }
-.reviews-block .owl-carousel .owl-item .reviews-content::before {
+.reviews-block .owl-carousel .owl-stage .owl-item .reviews-content::before {
   content: "";
   position: absolute;
   top: 0;
@@ -6424,7 +6492,7 @@ header .menu-button .icon-bar:not(:first-child) {
   color: #888;
   opacity: 0.5;
 }
-.reviews-block .owl-carousel .owl-item .reviews-content::after {
+.reviews-block .owl-carousel .owl-stage .owl-item .reviews-content::after {
   content: "";
   position: absolute;
   bottom: 95px;
@@ -6432,11 +6500,11 @@ header .menu-button .icon-bar:not(:first-child) {
   color: #888;
   opacity: 0.5;
 }
-.reviews-block .owl-carousel .owl-item .reviews-name {
+.reviews-block .owl-carousel .owl-stage .owl-item .reviews-name {
   font-weight: normal;
   color: inherit;
 }
-.reviews-block .owl-carousel .owl-item .reviews-position {
+.reviews-block .owl-carousel .owl-stage .owl-item .reviews-position {
   font-style: italic;
 }
 .reviews-block .owl-carousel div {
@@ -6477,17 +6545,20 @@ header .menu-button .icon-bar:not(:first-child) {
   background-color: #FFF;
   text-align: center;
 }
-.mentors-block .owl-item .mentors-name {
+.mentors-block .owl-stage {
+  margin: 0 auto;
+}
+.mentors-block .owl-stage .owl-item .mentors-name {
   color: #3498db;
   font-size: 18px;
   font-weight: 900;
   border-bottom: 1px solid #F7F7F7;
 }
-.mentors-block .owl-item .mentors-desc {
+.mentors-block .owl-stage .owl-item .mentors-desc {
   color: #888;
   font-size: 16px;
 }
-.mentors-block .owl-item img {
+.mentors-block .owl-stage .owl-item img {
   width: 50vw;
   object-position: center;
   margin: auto;

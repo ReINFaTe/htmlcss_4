@@ -4,7 +4,7 @@ header {
     top: 0;
     right: 0;
     overflow: hidden;
-    max-height: 20vw;
+    height: 64px;
     width: 100%;
     background-color: $block-color1;
     box-shadow: 0 1px 12px 0 rgb(51 51 51 / 23%);
@@ -17,8 +17,7 @@ header {
     flex-wrap: wrap;
     padding-left: $padding-320px;
     padding-right: $padding-320px;
-    transition: max-height 1s ease-in;
-
+    transition: height 1s ease-in;
     .logo {
         grid-area: a;
         height: 15vw;
@@ -92,12 +91,37 @@ header {
             }
         }
     }
+    @media (min-width: 768px) {
+        .logo {
+            display: none;
+        }
+        grid-template-columns: auto 7fr;
+        .menu-button {
+            display: none;
+        }
+        .menu {
+            visibility: visible;
+            grid-area: b;
+            li {
+                display: inline;
+                a{
+                    display: inline;
+                }
+            }
+        }
+    }
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr auto;
+        .logo {
+            display: block;
+        }
+    }
 }
 
 #menu-open:target{
     ~ header {
-        max-height: 100vw;
-        transition: max-height 1s ease-out;
+        height: 300px;
+        transition: height 1s ease-out;
 
         .menu{
             visibility: visible;

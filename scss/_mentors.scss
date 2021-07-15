@@ -3,22 +3,26 @@
     padding-right: $padding-320px;
     background-color: $block-color1;
     text-align: center;
-    .owl-item {
-        .mentors-name {
-            color: #3498db;
-            font-size: 18px;
-            font-weight: 900;
-            border-bottom: 1px solid #F7F7F7;
-        }
-        .mentors-desc {
-            color: #888;
-            font-size: 16px;
-        }
-
-        img {
-            width: 50vw;
-            object-position: center;
-            margin: auto;
+    .owl-stage {
+        margin: 0 auto; 
+        .owl-item {
+            .mentors-name {
+                color: #3498db;
+                font-size: 18px;
+                font-weight: 900;
+                border-bottom: 1px solid #F7F7F7;
+            }
+            .mentors-desc {
+                color: #888;
+                font-size: 16px;
+            }
+    
+            img {
+                width: 50vw;
+                object-position: center;
+                margin: auto;
+            }
         }
     }
+
 }

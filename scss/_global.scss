@@ -23,6 +23,32 @@ body {
 
 h2 {
     padding-top: 50px;
+    margin-top: 0;
     text-align: center;
     font-weight: 400;
+}
+.fadeIn {
+    animation-name: fadeIn;
+}
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    0% {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.1;
+    }
+    0% {
+        opacity: 1;
+    }
 }
